@@ -1,5 +1,5 @@
 module OmniAuth
-  module Fitbit
+  module Withings
     VERSION = "1.0.1"
   end
 end

@@ -12,4 +12,5 @@ group :development, :test do
   gem 'nokogiri'
   gem 'multi_xml'
   gem 'rack-test'
+  gem 'net-http-spy'
 end

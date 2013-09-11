@@ -1,20 +1,20 @@
-# OmniAuth Fitbit Strategy
+# OmniAuth Withings Strategy
 
-This gem is an OmniAuth 1.0+ Strategy for the [Fitbit API](https://wiki.fitbit.com/display/API/OAuth+Authentication+in+the+Fitbit+API).
+This gem is an OmniAuth 1.0+ Strategy for the [Withings API](http://www.withings.com/api).
 
 ## Usage
 
 Add the strategy to your `Gemfile`:
 
 ```ruby
-gem 'omniauth-fitbit'
+gem 'omniauth-withings'
 ```
 
 Then integrate the strategy into your middleware:
 
 ```ruby
 use OmniAuth::Builder do
-  provider :fitbit, 'consumer_key', 'consumer_secret'
+  provider :withings, 'consumer_key', 'consumer_secret'
 end
 ```
 
@@ -22,11 +22,18 @@ In Rails, create a new file under config/initializers called omniauth.rb to plug
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :fitbit, 'consumer_key', 'consumer_secret'
+  provider :withings, 'consumer_key', 'consumer_secret'
 end
+
 ```
 
-To register your application with Fitbit and obtain a consumer key and secret, go to the [Fitbit application registration](https://dev.fitbit.com/apps/new).
+## Example Application
+
+There is an example Sinatra application in spec/integration_app.rb
+
+## Withings API Credentials and other info
+
+To register your application with Withings and obtain a consumer key and secret, go to the [Withings application registration](https://oauth.withings.com/en/partner/add).
 
 For additional information about OmniAuth, visit [OmniAuth wiki](https://github.com/intridea/omniauth/wiki).
 
@@ -35,4 +42,4 @@ For a short tutorial on how to use OmniAuth in your Rails application, visit [th
 
 ## Copyright
 
-Copyright (c) 2012 TK Gospodinov. See [LICENSE](https://github.com/tkgospodinov/omniauth-fitbit/blob/master/LICENSE.md) for details.
+Copyright (c) 2013 O.C. Tanner. See [LICENSE](https://github.com/octanner/omniauth-withings/blob/master/LICENSE.md) for details.

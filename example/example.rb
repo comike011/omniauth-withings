@@ -1,18 +1,21 @@
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+require 'omniauth/strategies/withings'
 require 'sinatra'
-require 'omniauth-fitbit'
 
 use Rack::Session::Cookie
+
 use OmniAuth::Builder do
-  provider :fitbit, '<consumer_key>', '<consumer_secret>'
+  provider :withings, ENV['WITHINGS_KEY'], ENV['WITHINGS_SECRET']
 end
 
 get '/' do
   <<-HTML
-  <a href='/auth/fitbit'>Sign in with Fitbit</a>
+  <h1>Withings OmniAuth Test App</h1>
+  <a href='/auth/withings'>Sing in with Withings</a>
   HTML
 end
-  
-get '/auth/fitbit/callback' do
-  # Do whatever you want with the data
-  MultiJson.encode(request.env['omniauth.auth'])
+
+get '/auth/:name/callback' do
+  "Done"
 end
+

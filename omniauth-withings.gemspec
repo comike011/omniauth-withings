@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "omniauth-fitbit/version"
+require "omniauth-withings/version"
 
 Gem::Specification.new do |s|
-  s.name        = "omniauth-fitbit"
-  s.version     = OmniAuth::Fitbit::VERSION
-  s.authors     = ["TK Gospodinov"]
-  s.email       = ["tk@gospodinov.net"]
-  s.homepage    = "http://github.com/tkgospodinov/omniauth-fitbit"
-  s.summary     = %q{OmniAuth strategy for Fitbit}
-  s.description = %q{OmniAuth strategy for Fitbit}
+  s.name        = "omniauth-withings"
+  s.version     = OmniAuth::Withings::VERSION
+  s.authors     = ["Matthew Thorley"]
+  s.email       = ["thorley@gmail.com"]
+  s.homepage    = "http://github.com/octanner/omniauth-withings"
+  s.summary     = %q{OmniAuth strategy for Withings}
+  s.description = %q{OmniAuth strategy for Withings}
 
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
