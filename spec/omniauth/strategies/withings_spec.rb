@@ -26,7 +26,7 @@ describe "OmniAuth::Strategies::Withings" do
   context 'uid' do
     before :each do
       access_token = double('access_token')
-      access_token.stub('params') { { 'encoded_user_id' => '123ABC' } }
+      access_token.stub('params') { { 'userid' => '123ABC' } }
       subject.stub(:access_token) { access_token }
     end
 

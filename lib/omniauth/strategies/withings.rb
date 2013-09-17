@@ -15,7 +15,7 @@ module OmniAuth
       }
 
       uid do
-        access_token.params['encoded_user_id']
+        access_token.params['userid']
       end
 
       info do
