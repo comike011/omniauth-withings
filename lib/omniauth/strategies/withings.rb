@@ -47,11 +47,7 @@ module OmniAuth
       end
 
       def user_uri
-        "http://wbsapi.withings.net/user?action=getbyuserid&userid=#{userid}"
-      end
-
-      def userid
-        @userid ||= access_token.params[:userid]
+        "http://wbsapi.withings.net/user?action=getbyuserid&userid=#{uid}"
       end
     end
   end
